@@ -32,10 +32,11 @@ class Game {
         }
         try {
             this.board.move(move);
+            console.log(this.board.turn());
+            
         }
         catch (e) {
             console.log(e);
-            return;
         }
         if (this.board.isGameOver()) {
             this.player1.send(JSON.stringify({
